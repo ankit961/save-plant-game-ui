@@ -72,16 +72,6 @@ The goal is to grow the plant from a tiny seed to a full-grown plant by managing
 4. Watch for random events, energy boosts, and environmental changes.
 5. Aim to grow the plant to its full size while managing resources carefully!
 
-## 📷 Screenshots
-
-*Example screenshots showing different stages of the game.*
-
-| Screenshot | Description |
-|------------|-------------|
-| ![Plant Seed Stage](docs/screenshots/seed-stage.png) | The plant at its early stage (seed). |
-| ![Mid Growth Stage](docs/screenshots/mid-growth-stage.png) | The plant at a mid-growth stage. |
-| ![Full Growth](docs/screenshots/full-growth.png) | The plant fully grown! |
-| ![Random Event](docs/screenshots/event-notification.png) | A pest attack notification. |
 
 ## 🌱 Future Enhancements
 
