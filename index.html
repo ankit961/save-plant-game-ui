@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Plant Growing Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Grow Your Virtual Plant</h1>
+
+        <!-- Rules Section -->
+        <div class="rules">
+            <h2>Game Rules & Actions</h2>
+            <p>Help your plant grow to its full potential by managing water, fertilizer, pest control, and protection actions. Each action has a cooldown and energy cost, so plan carefully!</p>
+            <ul>
+                <li><strong>Watering</strong>: Increases growth, requires energy. Avoid over-watering or during rain (Cooldown: 1 min).</li>
+                <li><strong>Fertilizing</strong>: Boosts growth. Overuse damages the plant (Cooldown: 3 mins).</li>
+                <li><strong>Pest Spray</strong>: Controls pest attacks and restores health if pests are present (Cooldown: 5 mins).</li>
+                <li><strong>Mulch</strong>: Reduces water needs, protects from drought (Cooldown: 10 mins).</li>
+                <li><strong>Pruning</strong>: Slightly boosts growth, but overuse reduces health (Cooldown: 7 mins).</li>
+                <li><strong>Shade Protection</strong>: Provides temporary protection from hot weather, reducing health decay.</li>
+            </ul>
+        </div>
+
+        <!-- Plant Display Area -->
+        <div class="plant-container">
+            <img id="plant" src="seed.svg" alt="Plant" class="plant">
+            <div id="pest-attack" class="pest-attack">🐛 Pest Attack!</div>
+            <div id="drought-warning" class="drought-warning">🔥 Drought!</div>
+        </div>
+
+        <!-- Health, Growth, and Energy Indicators -->
+        <div class="indicators">
+            <div class="health-bar">
+                <span>Health: <span id="healthCounter">80</span>%</span>
+                <div id="health" class="bar"></div>
+            </div>
+            <div class="growth-bar">
+                <span>Growth: <span id="growthCounter">0</span>%</span>
+                <div id="growth" class="bar"></div>
+            </div>
+            <div class="energy-bar">
+                <span>Energy: <span id="energyCounter">60</span>%</span>
+                <div id="energy" class="bar"></div>
+            </div>
+        </div>
+
+        <!-- Weather and Temperature Display -->
+        <div class="weather-display">
+            <div id="weather" class="weather-info">Weather: Sunny</div>
+            <div id="temperature" class="weather-info">Temperature: 25°C</div>
+            <div id="event-timer" class="weather-info">Event in: 30s</div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="actions">
+            <button onclick="waterPlant()">💧 Water</button>
+            <button onclick="fertilizePlant()">🌱 Fertilize</button>
+            <button onclick="pestSpray()">🪲 Pest Spray</button>
+            <button onclick="mulch()">🪵 Mulch</button>
+            <button onclick="prune()">✂️ Prune</button>
+            <button onclick="shadeProtection()">🛡️ Shade Protection</button>
+            <button onclick="restoreEnergy()" id="rest-button">🛌 Rest</button>
+        </div>
+
+        <!-- Notification Area -->
+        <div id="notification" class="notification"></div>
+
+        <!-- Objective and End Message -->
+        <div id="objective" class="objective">Objective: Help the plant grow to its full potential by carefully managing resources and protecting it from challenges.</div>
+        <div id="endMessage" class="end-message"></div>
+
+        <!-- Energy Boosting Item -->
+        <div id="energy-item" class="energy-item" onclick="collectEnergyItem()">🍎 Click to Collect Energy!</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
